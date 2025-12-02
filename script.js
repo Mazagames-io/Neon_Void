@@ -77,7 +77,7 @@ function resizeCanvas() {
     canvas.height = parent.clientHeight;
 
     // Reset player position on resize
-    state.player.y = canvas.height - 50;
+    state.player.y = canvas.height - 100;
     state.player.x = canvas.width / 2 - state.player.width / 2;
 }
 

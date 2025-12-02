@@ -1,8 +1,11 @@
 :root {
     --bg-color: #050505;
-    --primary-neon: #00f3ff; /* Cyan */
-    --secondary-neon: #ff00ff; /* Magenta */
-    --accent-neon: #00ff66; /* Lime Green */
+    --primary-neon: #00f3ff;
+    /* Cyan */
+    --secondary-neon: #ff00ff;
+    /* Magenta */
+    --accent-neon: #00ff66;
+    /* Lime Green */
     --text-color: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -14,7 +17,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    user-select: none; /* Prevent text selection during play */
+    user-select: none;
+    /* Prevent text selection during play */
 }
 
 body {
@@ -22,7 +26,10 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     height: 100vh;
-    overflow: hidden; /* Prevent scrolling */
+    height: 100dvh;
+    /* Mobile viewport fix */
+    overflow: hidden;
+    /* Prevent scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +38,8 @@ body {
 .app-container {
     width: 100%;
     height: 100%;
-    max-width: 600px; /* Mobile-first constraint for desktop */
+    max-width: 600px;
+    /* Mobile-first constraint for desktop */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -207,9 +215,22 @@ input[type="text"]:focus {
     font-size: 0.9rem;
 }
 
-#highScoreList li:nth-child(1) { color: #ffd700; text-shadow: 0 0 5px #ffd700; } /* Gold */
-#highScoreList li:nth-child(2) { color: #c0c0c0; } /* Silver */
-#highScoreList li:nth-child(3) { color: #cd7f32; } /* Bronze */
+#highScoreList li:nth-child(1) {
+    color: #ffd700;
+    text-shadow: 0 0 5px #ffd700;
+}
+
+/* Gold */
+#highScoreList li:nth-child(2) {
+    color: #c0c0c0;
+}
+
+/* Silver */
+#highScoreList li:nth-child(3) {
+    color: #cd7f32;
+}
+
+/* Bronze */
 
 /* --- Ads --- */
 .ad-banner {
@@ -240,9 +261,17 @@ input[type="text"]:focus {
 
 /* --- Animations --- */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .new-record-text {
