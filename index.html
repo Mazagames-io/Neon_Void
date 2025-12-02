@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Void - Endless Runner</title>
+    <meta name="description" content="A fast-paced, addictive endless runner game. Dodge the neon obstacles and set the high score!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Ad Space Top -->
+        <div class="ad-banner top-banner">
+            <span class="ad-placeholder-text">Advertisement Space</span>
+        </div>
+
+        <header>
+            <h1>NEON <span class="highlight">VOID</span></h1>
+            <div class="score-display">Score: <span id="currentScore">0</span></div>
+        </header>
+
+        <main id="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Start Screen Overlay -->
+            <div id="startScreen" class="overlay active">
+                <div class="overlay-content">
+                    <h2>Ready to Dive?</h2>
+                    <p>Use <strong>Arrow Keys</strong> or <strong>Touch</strong> to move.</p>
+                    <button id="startBtn" class="neon-btn">START GAME</button>
+                    <button id="showScoresBtn" class="secondary-btn">High Scores</button>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="gameOverScreen" class="overlay">
+                <div class="overlay-content">
+                    <h2>GAME OVER</h2>
+                    <p class="final-score">Score: <span id="finalScoreDisplay">0</span></p>
+                    
+                    <div id="newHighScoreSection" class="hidden">
+                        <p class="new-record-text">NEW HIGH SCORE!</p>
+                        <input type="text" id="playerNameInput" placeholder="Enter Your Name" maxlength="10">
+                        <button id="saveScoreBtn" class="neon-btn small">Save</button>
+                    </div>
+
+                    <div id="regularGameOverActions">
+                        <button id="restartBtn" class="neon-btn">TRY AGAIN</button>
+                        <button id="menuBtn" class="secondary-btn">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Scores Overlay -->
+            <div id="highScoreScreen" class="overlay">
+                <div class="overlay-content">
+                    <h2>TOP 10 LEGENDS</h2>
+                    <ul id="highScoreList">
+                        <!-- Scores injected via JS -->
+                    </ul>
+                    <button id="closeScoresBtn" class="secondary-btn">Back</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Ad Space Bottom -->
+        <div class="ad-banner bottom-banner">
+            <span class="ad-placeholder-text">Advertisement Space</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
