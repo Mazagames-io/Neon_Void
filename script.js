@@ -219,6 +219,24 @@ function gameOver() {
     }
 
     gameOverScreen.classList.add('active');
+
+    // Load Popunder Ad (only once per session)
+    loadPopunderAd();
+}
+
+let popunderLoaded = false;
+function loadPopunderAd() {
+    if (popunderLoaded) return;
+
+    const script = document.createElement('script');
+    script.dataset.zone = '10266387';
+    script.src = 'https://al5sm.com/tag.min.js';
+
+    // Append to body like the original script did
+    document.body.appendChild(script);
+
+    popunderLoaded = true;
+    console.log("Popunder ad script loaded.");
 }
 
 function getHighScores() {
